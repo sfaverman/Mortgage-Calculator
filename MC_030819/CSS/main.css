@@ -1,0 +1,235 @@
+/*font: italic bold 12px/30px Georgia, serif;*/
+
+body {
+    font-family: Helvetica, Verdana, sans-serif; 
+    /* font-family: Georgia, serif; */
+    /*background-color: rgb(200,200,200, 0.5);*/
+    margin: 10px auto;
+}
+
+header, nav, main, article, aside, section, footer, video,
+audio, figure { display: block; }
+
+.container {
+   /* max-width: 960px;*/
+    background-color: lightblue;
+    box-sizing: border-box;
+    margin-left:0;
+    padding-left: 0;
+}
+h1 {
+    color: darkcyan;
+    text-align: center;
+    margin: 10px 25px;
+    font-weight: bold;
+    font-size: 2.1em;
+    text-shadow: 1px 1px 2px #fff,  
+                 2px 2px 3px #666,
+                 3px 3px 5px #999;
+    letter-spacing: 0.2em;
+}
+main {
+    background-color:  #fff; 
+    padding: 20px auto;
+    width: 100%;
+    margin-left:0;
+    }
+main h2 {
+    color: darkcyan;
+    font: bold 1.3 Arial;
+    /*font-size: 1.3em;*/
+    text-align: center;
+   /* font-style: italic;*/
+    letter-spacing: 0.1em;
+}
+
+p {
+    color: black;
+    margin: 10px 10px;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+header {
+   /* text-align: center;*/
+    position: relative;
+}
+
+
+figure {
+    width: 15%;
+	height: auto;
+    float: left;
+/*
+    margin-right: 10px;
+*/
+}
+img {
+    max-width: 100%;
+    height:auto;
+}
+
+header img {
+    border: solid 3px darkcyan; 
+    border-radius: 8px;
+    /*backface-visibility: hidden;*/
+	margin: 10px;
+    float: left;
+}
+
+/* Navigation - Hamburger menu for mobile */
+
+nav.mainNav {
+    background-color: azure; /*#dedede; */
+	width: 100%;
+}
+.mainNav ul {
+    list-style-type: none;
+}
+.mainNav li {
+    border-bottom: solid 1px #999;
+}
+.mainNav li a {
+    display: block;
+    padding-left: 10px;
+    margin-top: 20px;
+	text-decoration: none;
+}
+#navigation nav {
+    height: 0;
+    overflow: hidden;
+}
+   /* fixing problems on some browsers - tricking */ 
+body {
+    -webkit-animation: bugfix infinite 1s;
+}
+@webkit-keyframes bugfix {
+    from { padding: 0;}
+    to { padding: 0;}
+}
+#navigation {
+	width: 100%;
+}
+#navigation input[type=checkbox] {
+    position: absolute;
+    top: -999em;
+    left: -999em;  /* hide checkbox out of screen */
+}
+#navigation label {
+    display: block;
+    background: url("../IMAGES/nav-icon.png") no-repeat right center;
+    position: relative;
+    top: 30px;
+    right: 15px;
+    text-indent: -999em;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px;
+    margin-left: 0;
+  }
+#navigation input[type=checkbox]:checked ~ nav {
+    height: auto;
+    overflow: hidden;
+}
+/* End of Navigation */
+
+footer {
+    padding: 30px 0;
+    font-size: 0.75em;
+    text-align: center;
+	/* border-top: solid 30px #ededed;*/
+}
+
+#calculate, main {
+    clear: both;
+}
+
+.formMortCalc, .formAmortTblCalc {
+    border: solid 2px;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    background-color: azure;
+    clear: both;
+}
+
+#amortTable {
+    width: 90%;
+    margin: auto;
+    border: solid 2px;
+}
+#amortTable tr:nth-child(even) {
+    background-color: azure; /* #ededed; */
+}
+
+#amortTable tr td:nth-child(3),
+#amortTable tr th:nth-child(3) {
+    display: none;
+} 
+
+article h3 {
+    text-align: center;
+    letter-spacing: 0.1em; 
+    color: darkcyan;
+}
+input {
+    padding-left: 4px;
+    text-align: left;
+}
+
+#outMonthly {
+   /* background-color: lemonchiffon;*/
+    font-weight: bold;
+    font-size: 1.2em;
+    color: darkmagenta;
+    padding-left: 5px;
+}
+article p {
+  padding-left: 10px;
+}
+
+section {
+    margin-top: 1.3em;
+}
+
+button {
+     padding: 5px;
+     background-color: darkcyan;
+     color: lightcyan;
+}
+#otherBtn {
+    border: none;
+    background-color: azure;
+    color: #000;
+    font-weight: bold;
+}
+
+.clearIt {
+    clear: both;
+}
+@media screen and (min-width: 580px) {
+    /*header h1 {
+        top: 80%;
+    }*/
+	#navigation nav {
+/*		width: 100%;
+		margin-right: 0;*/
+	}
+	.mainNav ul {
+		float: right;
+		margin-right: 10px;
+    }
+    #navigation label {
+        display: none;
+    }
+    #navigation nav {
+        height: auto;
+        overflow: visible;
+    }
+    #navigation li {
+        display: inline-block;
+        border: none;
+        
+    }
+}
+
