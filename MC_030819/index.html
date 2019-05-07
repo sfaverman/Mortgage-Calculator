@@ -10,8 +10,8 @@
         <![endif]-->
     <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––– ––>
     <!-- Normalize.css makes browsers render all elements more consistently -->
-    <link rel="stylesheet" href="css/normalize.css">   
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="CSS/normalize.css" type="text/css">
+    <link rel="stylesheet" href="CSS/main.css" type="text/css">
     
     <!-- JS –––––––––––––––––––––––––––––––––––––––––––––– -->     
 </head>
@@ -22,9 +22,9 @@
       <header>
        
         <figure>
-            <img src="IMAGES/image_hand.jpg" alt="mortgage calculator">
+            <img src="IMAGES/image_hand.jpg" alt="logo hand holding a house">
         </figure>
-      </header>
+
          
         <!-- Navigation - HAMBURGER MENU -->
      <div id="navigation">
@@ -33,8 +33,8 @@
                 <!--nav.mainNav>ul>li*6>a[#]-->
          <nav class="mainNav">
             <ul>
-                <li><a href="">Mortgage Calculator</a></li>
-                <li><a href="PAGES/amortizationTable.html">Amortization Schedule</a></li>  
+                <li><a href="">Calculator</a></li>
+                <li><a href="PAGES/amortizationTable.html">Schedule</a></li>
                 <li><a href="PAGES/about.html">Terms</a></li>
                 <li><a href="PAGES/contact.html">Contact</a></li>
             </ul>
@@ -42,7 +42,7 @@
      </div>
      <!-- end of NAVIGATION -->
          
-          
+      </header>
      <main>
    
      <h1>Mortgage Loan Calculator</h1>   
@@ -51,7 +51,7 @@
      
      <p>This tool allows you to calculate your monthly home loan payments, using various <a href="http://www.businessdictionary.com/definition/loan-term.html" target="_blank">loan terms</a>, <strong><em>interest rates</em></strong>, and loan amounts. It includes advanced features like <strong><em>amortization tables</em></strong> and the ability to calculate a loan including property taxes, homeowners insurance &amp; property mortgage insurance.</p>
         
-     <article class="formMortCalc">    
+     <form action="" class="formMortCalc">
          <h3>Select Loan Terms:</h3>
                <p><strong>Fixed                   
                   <input type="radio" name="term" value="30" checked="checked">30 Year
@@ -69,7 +69,7 @@
         <hr> 
     
         <p><strong>Total Monthly Payment: </strong><span id="outMonthly">$XXX.XX</span></p>                   
-     </article> <!-- end of formMortCalc -->  
+     </form> <!-- end of formMortCalc -->
                
     </main> 
                       
