@@ -49,22 +49,17 @@ header {
 	border-bottom: solid 3px darkgray;
 }
 
-/*main {
-	clear: both;
-}*/
 img {
 	max-width: 100%;
 	height: auto;
 }
-figure {
-	float: left;
-	width: 15%;
-	height:auto;
-	margin: 1%;
-}
-figure img {
+header img {
+    float: left;
+	max-width: 15%;
+	max-height: 120px; /* 120px; */
 	border: solid 3px darkcyan;
     border-radius: 8px;
+    margin: 1%;
 }
 
 /* Navigation - Hamburger menu for mobile */
@@ -186,7 +181,7 @@ input {
    /* background-color: lemonchiffon;*/
     font-weight: bold;
     font-size: 1.2em;
-    color: darkmagenta;
+    color: darkcyan;
     padding-left: 5px;
 }
 article p {
