@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- need meta viewport for RWD -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> My Simple Mortgage Calculator - About - Terms </title>
+        <!--[if lt IE9]>
+            <script src="scripts/html5shiv.min.js" type="text/javascript"></script>
+        <![endif]-->
+    <!-- CSS ––––––––––––––––––––––––––––––––––––––––––––––––––----------- -->
+    <!-- Normalize.css makes browsers render all elements more consistently -->
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="../CSS/main.css" type="text/css">
+     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+	<!-- Style -->
+    <title>jQuery Accordion</title>
+
+    <!-- JQUERY ------------------------------ -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+
+    /* $(document).ready(function() { */
+        $(function() {
+
+			//add + icon to all h3s
+			$(".accordion h3").prepend('<i class="icon ion-md-add-circle"></i>');
+
+			$('.accordion h3').click(function () {
+
+
+				//slide up all the content
+				$('.accordion p').slideUp();
+
+				$('.accordion h3 i').removeClass('ion-md-remove-circle ion-md-add-circle').addClass('ion-md-add-circle');
+
+				//slide down the content for h3 clicked - only if it's closed
+				if (!$(this).next().is(':visible')) {
+					$(this).next().slideDown();
+					  //toggle plus and minus icons
+					$(this).find('i').toggleClass('ion-md-add-circle ion-md-remove-circle');
+				    };
+
+			});
+
+        }); // end doc ready
+	</script>
+
+</head>
+  <body>
+  <section class="container">
+  	 <header>
+        <figure>
+              <img src="../IMAGES/image_hand.jpg" alt="mortgage calculator">
+         </figure>
+
+     <!-- Navigation - HAMBURGER MENU -->
+     <div id="navigation">
+         <input type="checkbox" id="toggle">
+         <label for="toggle">Menu</label>
+                <!--nav.mainNav>ul>li*6>a[#]-->
+         <nav class="mainNav">
+            <ul>
+                <li><a href="../index.html">Calculator</a></li>
+                <li><a href="amortizationTable.html">Schedule
+                </a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+         </nav>
+     </div>
+     <!-- end of NAVIGATION -->
+     </header>
+
+     <main>
+         <h1>Mortgage Loan Calculator</h1>
+         <h2>A B O U T</h2>
+
+		 <p>This tool allows you to calculate your monthly home loan payments, using various loan terms, interest rates, and loan amounts. It includes advanced features like amortization tables and the ability to calculate a loan including property taxes, homeowners insurance &amp; property mortgage insurance.</p>
+
+         <h2>T E R M I N A L O G Y</h2>
+
+         <ul class="accordion">
+
+           <li>
+			   <h3>What is a Mortgage Loan Calculator</h3>
+               <p>Apply this to - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque illo incidunt earum sunt sint excepturi consectetur impedit dolorum iste est vel nesciunt, nobis quae laborum, rem facilis hic. Tenetur, rem!</p>
+           </li>
+           <li>
+               <h3>What is an Amortization Schedule</h3>
+               <p>An amortization schedule is a complete table of periodic loan payments, showing the amount of principal and the amount of interest that comprise each payment until the loan is paid off at the end of its term.</p>
+           </li>
+           <li>
+               <h3>What is a Loan Term</h3>
+               <p>Period over which a loan agreement is in force, and before or at the end of which the loan should either be repaid or renegotiated for another term.</p>
+           </li>
+           <li>
+               <h3>Down Payment</h3>
+               <p>Down Payment- is the amount of the purchase price that the buyer is paying. Generally, lenders require a specific down payment in order to qualify for the mortgage.</p>
+           </li>
+           <li>
+               <h3>Annual Percentage Rate (Interest Rate)</h3>
+               <p>The Annual Percentage Rate is the rate of interest that will be paid back to the mortgage lender. How much interest is charged on your loan balance every period. The rate can either be a fixed rate or adjustable rate.</p>
+           </li>
+           <li>
+               <h3>Fixed-rate mortgage</h3>
+               <p>A Fixed-rate mortgage is a home loan with a fixed interest rate for the entire term of the loan. The Loan term is the period of time during which a loan must be repaid. For example, a 30-year fixed-rate loan has a term of 30 years.</p>
+           </li>
+           <li>
+               <h3>Adjustable-rate mortgage (ARM)</h3>
+               <p>An Adjustable-rate mortgage (ARM) is a mortgage in which your interest rate and monthly payments may change periodically during the life of the loan, based on the fluctuation of an index. Lenders may charge a lower interest rate for the initial period of the loan. Also called a variable-rate mortgage.</p>
+           </li>
+           <li>
+               <h3>What is a loan Principal Balance</h3>
+               <p> - The amount you originally borrowed.<br>
+				   - The balance on the loan account at any one time after the last payment has been made. </p>
+			 </li>
+             <li>
+               <h3>What is a Home Equity</h3>
+               <p>The Home Equity - the difference between the value of the home and the mortgage loan is called equity. Over time, as the value of the home increases and the amount of the loan decreases, the equity of the home generally increases./p>
+           </li>
+         </ul>
+		 <p>
+		 	<a href="http://www.businessdictionary.com/definition/loan-term.html" target="_blank">Learn More</a>
+		 </p>
+    </main>
+    <footer>
+     	 <p>Questions? <a href="mailto:sofiasd@yahoo.com">Email us</a> for help.</p>
+     	 <p>Copyright &copy; 2018 My Simple Mortgage Calculator.</p>
+     </footer>
+  </section>
+      <script src="../SCRIPTS/amortSched.js"></script>
+  </body>
+
+</html>
