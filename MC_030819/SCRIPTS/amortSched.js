@@ -13,7 +13,7 @@ function amortizePmts 		(loanAmount,intRate,numPay,monPmt,startDate) {
   startDate format from from input is mm/dd/yyyy */
 
   var dt = new Date(startDate);
-  console.log("date=" + dt);
+  //console.log("date=" + dt);
   var date = new Date(dt);
   var year = date.getFullYear();
   // var month = date.getMonth()+1;
@@ -32,7 +32,7 @@ function amortizePmts 		(loanAmount,intRate,numPay,monPmt,startDate) {
   var rowDate;
   var ytdPrincipal = 0, ytdInterest = 0,
 	  ytdBalance = 0, ytdMonPmt = 0;
-  console.log("ytd",ytdPrincipal);
+  //console.log("ytd",ytdPrincipal);
   var yearEnd = false;
   var j = 1;
 
@@ -56,9 +56,9 @@ function amortizePmts 		(loanAmount,intRate,numPay,monPmt,startDate) {
     }
 
 	if  (yearEnd)  {
-		console.log("i=",i,"numPay=",numPay);
+		//console.log("i=",i,"numPay=",numPay);
 
-		console.log("yearend true if block");
+		//console.log("yearend true if block");
 
 		 var amtTable = document.getElementById("amortTable");
 
@@ -95,7 +95,7 @@ function amortizePmts 		(loanAmount,intRate,numPay,monPmt,startDate) {
 		var cell5 = row.insertCell(4);
 		var cell6 = row.insertCell(5);
 		cell1.innerHTML = i;
-        console.log ("i=",i,"monthIndex",monthIndex);
+        //console.log ("i=",i,"monthIndex",monthIndex);
 		rowDate =  monthTbl[monthIndex] + ' ' + day + ',' + year;
 
 		cell2.innerHTML = rowDate;
@@ -116,7 +116,7 @@ function amortizePmts 		(loanAmount,intRate,numPay,monPmt,startDate) {
 		cell6.innerHTML = newBalance;
 
 		ytdMonPmt += Number(monPmt);
-		console.log("ytd",ytdPrincipal,"monthly",monthly);
+		// console.log("ytd",ytdPrincipal,"monthly",monthly);
 		ytdPrincipal += Number(monthly);
 		ytdInterest += Number(dispInt);
 		ytdBalance += Number(newBalance);
@@ -154,7 +154,10 @@ function twoDecimal(chgVar) {
 
 var btn = document.getElementById("btnCalc");
 btn.onclick = function () {
-
+	event.preventDefault();
+	var formA = document.getElementById("formA");
+	formA.checkValidity();
+    formA.reportValidity();
 // Declare and initialize the variables
     
   var eleId;
@@ -165,9 +168,9 @@ btn.onclick = function () {
   var intRate = document.getElementById("inRate").value;
   var numPay = document.getElementById("inNumPay").value;
   var startDate = document.getElementById("inFirstDay").value;
-  console.log("start date is",startDate);
+  //console.log("start date is",startDate);
 
-  console.log("loanAmount=",loanAmount," Rate=",intRate," # ofPay=", numPay); 
+  //console.log("loanAmount=",loanAmount," Rate=",intRate," # ofPay=", numPay);
   
   //Calculate and display the monthly payment amount*/
   var monPmt=calcMonthly(loanAmount,numPay,intRate);

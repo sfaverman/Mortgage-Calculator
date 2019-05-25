@@ -8,12 +8,12 @@
         <!--[if lt IE9]>
             <script src="scripts/html5shiv.min.js" type="text/javascript"></script>
         <![endif]-->
-    <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––– ––>
+    <!-- CSS ––>
     <!-- Normalize.css makes browsers render all elements more consistently -->
     <link rel="stylesheet" href="CSS/normalize.css" type="text/css">
     <link rel="stylesheet" href="CSS/main.css" type="text/css">
     
-    <!-- JS –––––––––––––––––––––––––––––––––––––––––––––– -->     
+    <!-- JS at the bottom -->
 </head>
 <body>
     
@@ -30,7 +30,7 @@
                 <!--nav.mainNav>ul>li*6>a[#]-->
          <nav class="mainNav">
             <ul>
-                <li><a href="">Calculator</a></li>
+                <li class="active"><a href="#">Calculator</a></li>
                 <li><a href="PAGES/amortizationTable.html">Schedule</a></li>
                 <li><a href="PAGES/terms.html">Terms</a></li>
                 <li><a href="PAGES/contact.html">Contact</a></li>
@@ -46,33 +46,47 @@
      <h2>Find out how much mortgage you can afford</h2>
      
      
-     <p>This tool allows you to calculate your monthly home loan payments, using various loan terms, interest rates, and loan amounts. It includes advanced features like amortization tables and the ability to calculate a loan including property taxes, homeowners insurance &amp; property mortgage insurance.</p>
+     <p>This tool allows you to calculate your monthly home loan payments, using various loan terms, interest rates, and loan amounts. It includes advanced feature like calculating amortization achedule.</p>
+     <!--  and the ability to calculate a loan including property taxes, homeowners insurance &amp; property mortgage insurance. -->
         
-     <article action="" class="formMortCalc">
+     <article class="formMortCalc">
          <h3>Select Loan Terms:</h3>
-               <p><strong>Fixed                   
+               <p>Fixed
                   <input type="radio" name="term" value="30" checked="checked">30 Year
                   <input type="radio" name="term" value="15">15 Year
                   <button id="otherBtn">
-                  <input type="radio" name="term" value="0"></button>Other <span id="otherTerm">&nbsp;</span>
+                  <input type="radio" name="term" value="0"></button>Other<span id="otherTerm">&nbsp;</span>
                   
-        </strong><p>
-        <p><strong>Cost of the House</strong>: <input type="text" id="inCost"></p>
-        <p><strong>Down Payment</strong>: <input type="text" id="inDown"></p> 
-        <p><strong>Interest (APR %)</strong>: <input type="text" id="inInterest"></p>
+			   </p>
        
-        <p><button id="btnCalc">Calculate</button></p> 
+       <form action="#" method="get" id="formC" class="inGrp">
+
+       	   	<label for="inCost">Cost of the House:</label>
+        	<input type="text" id="inCost" name="inCost" placeholder="500000" pattern="[0-9]*" title="Example: 800000" required>
+
+        	<label for="inDown">Down Payment:</label>
+        	<input type="text" id="inDown" name="inDown" placeholder="25000" pattern="[0-9]*" title="Example: 50000" required>
+
+        	<label for="inInterest">Interest (APR %):</label>
+        	<input type="text" id="inInterest" name="inInterest" size="5" placeholder="4.5" pattern="[0-9]*[.][0-9]*" title="Valid examples: 4.5, 5.25" required>
+
+
+        	<button id="btnCalc" class="clearIt">Calculate</button>
+        </form>
                             
         <hr> 
-     </article> <!-- end of formMortCalc -->
+
         <p><strong>Total Monthly Payment: </strong><span id="outMonthly">$XXX.XX</span></p>                   
+
+    	<hr>
+     </article> <!-- end of formMortCalc -->
 
                
     </main> 
                       
      <footer>
-         <p>Questions? <a href="mailto:sofiasd@yahoo.com">Email us</a> for help.</p>
-         <p>Copyright &copy;2018 My Simple Mortgage Calculator.</p>
+       <!--  <p>Questions? <a href="mailto:sofiasd@yahoo.com">Email us</a> for help.</p>-->
+         <p>Copyright &copy;2019 My Simple Mortgage Calculator.</p>
      </footer> 
           
      </section> <!-- end of container -->  
