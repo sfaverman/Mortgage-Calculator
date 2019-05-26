@@ -376,7 +376,7 @@ button {
 		bottom: 0;
 	}
 	ul.accordion h3 {
-		padding: 1em;
+		padding: 0.5em;
 		font-size: 1.3em;
 	}
 	ul.accordion p {
