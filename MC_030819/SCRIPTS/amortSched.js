@@ -134,7 +134,7 @@ function amortizePmts 		(loanAmount,intRate,numPay,monPmt,startDate) {
 
  } /* end for loop - whole amortization table */
 
- return;
+/* return;*/
 
 }
 
