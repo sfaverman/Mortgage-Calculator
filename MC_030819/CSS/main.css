@@ -299,7 +299,7 @@ ul.accordion p {
 	background-color: azure;
 }
 
-button {
+button, .formBtn input {
 	 padding: 5px;
      background-color: darkcyan;
      color: lightcyan;
@@ -315,9 +315,52 @@ button {
     color: #000;
     font-weight: bold;
 }
-
+.contact {
+	display: grid;
+	column-gap: 2%;
+ 	grid-row-gap: 10px;
+	padding: 25px ;
+}
+.contact form {
+	background-color: azure;
+	border: solid 2px darkcyan;
+	border-radius: 8px;
+}
+.contact ul {
+	list-style-type: none;
+	padding: 15px;
+	margin-bottom: 0;
+}
+.contact label {
+	width: 100%;
+}
+.contact input[type="email"], .contact textarea, .contact input[type="text"] {
+	width: 97%;
+	padding: 4px;
+	outline: none;
+	float: none;
+	margin-top: .2em;
+}
+.contact textarea {
+	height: 5em;
+}
+.contact input[type="reset"], .contact input[type="submit"] {
+	min-width: 100px;
+	text-align: center;
+	margin: 10px;
+}
+.contact .note {
+	text-align: left;
+	font-size: 1em;
+	margin-top:0;
+	margin-bottom: 0;
+}
 .clearIt {
     clear: both;
+}
+.contact .formBtn {
+	display: flex;
+	justify-content: space-between;
 }
 
 @media screen and (min-width: 450px) {
@@ -384,13 +427,13 @@ button {
 	ul.accordion p {
 		font-size: 1.2em;
 	}
+
 }
 @media screen and (min-width: 768px) {
 	 #navigation li {
        	width: 16%;
 		font-size: 1em;
     }
-
 
 }
 @media screen and (min-width: 850px) {
@@ -403,9 +446,16 @@ button {
 	ul.accordion {
 		width: 80%;
 	}
+	.contact {
+		grid-template-columns: repeat(2, 49%);
+	}
 }
 @media screen and (min-width: 1000px) {
 	ul.accordion  {
 		width: 60%;
+	}
+	.contact {
+		grid-template-columns: none;
+		padding: 0 25%;
 	}
 }

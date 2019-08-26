@@ -17,7 +17,7 @@
     
 </head>
   <body>
-  <section class="container">
+  <div class="container">
 
   	<header>
         <figure>
@@ -44,24 +44,60 @@
      </header>
 
      <main>
-         <h1>My Simple Mortgage Loan Calculator</h1>   
+         <h1>Mortgage Loan Calculator</h1>
 
-         <h2>F A Q</h2>
+         <!--<h2>F A Q</h2>
  			
 		 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati autem, sunt commodi quod earum iusto ducimus at reiciendis. Commodi ipsa itaque velit amet molestias adipisci nemo ipsam, qui? Recusandae, fuga.</p>
-        	       
-         <h2>Send us your feedback</h2>
-        
-         <p>Work in progress ... Coming soon!</p>
-		 <p>
-		 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, maxime delectus atque assumenda aliquam expedita sit nam facere est sequi quis, ipsam quod! Reiciendis doloribus iure explicabo. Architecto, voluptatum, excepturi.</p>
+        	       -->
+        <section class="contact">
+        	<article>
+        	 	<h2>CONTACT US</h2>
+
+        	 	<p>
+        	 			 Thank you for visiting. Got a question or feedback. We'd love to hear from you. Send us a message and we'll respond as soon as posible.</p>
+        	 </article>
+
+			 <form action="handle_feedback.php" method="post">
+			   <ul class="formInput">
+				   <li>
+					   <label for="name">Name*:</label>
+					   <input type="text" id="name" name="name" placeholder="Your name" autofocus required>
+				   </li>
+
+				   <li>
+					   <label for="email">Email*:</label>
+					   <input type="email" id="email" name="email" required placeholder="name@url.com">
+				   </li>
+				   <li>
+					   <label for="subject">Subject*:</label>
+					   <input type="text" id="subject" name="subject" placeholder="Feedback for Mortgage Calculator" required>
+				   </li>
+				   <li>
+					   <label for="msg">Questions/Comments*:</label>
+					   <textarea id="msg" name="msg" placeholder="Please write your message here" required></textarea>
+				   </li>
+			   </ul>
+			   <p class="note">* indicates required field</p>
+
+
+			   <ul class="formBtn">
+				   <li>
+					   <input type="reset">
+				   </li>
+				   <li>
+					   <input type="submit" value="Let's Go!">
+				   </li>
+			   </ul>
+			 </form>
+        </section>
 
      </main>
      <footer>
      	<!--<p>Questions? <a href="mailto:sofiasd@yahoo.com">Email us</a> for help.</p>-->
      	<p>Copyright &copy;2019 My Simple Mortgage Calculator.</p>
      </footer>
-  </section>     
+  </div>
 
   </body>
       
