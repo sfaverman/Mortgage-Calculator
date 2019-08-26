@@ -143,6 +143,9 @@ body {
 #navigation li.active {
 	background-color: darkcyan;
 }
+#navigation li.active:hover {
+	background-color: floralwhite;
+}
 .mainNav li.active a {
 	color: #fff;
 }
@@ -362,6 +365,15 @@ button, .formBtn input {
 	display: flex;
 	justify-content: space-between;
 }
+.feedback {
+	font-style: italic;
+	color: darkgray;
+	display: block;
+	margin: 15px 20px;
+	padding: 5px;
+	border: solid 1px darkgray;
+	background-color: azure;
+}
 
 @media screen and (min-width: 450px) {
 }
@@ -434,6 +446,9 @@ button, .formBtn input {
        	width: 16%;
 		font-size: 1em;
     }
+	.feedback {
+		margin: 15px 20%;
+	}
 
 }
 @media screen and (min-width: 850px) {

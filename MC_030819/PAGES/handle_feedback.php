@@ -77,14 +77,14 @@ if(isset($_POST['email'])) {
         !isset($_POST['subject']) ||
         !isset($_POST['email']) ||
         /*!isset($_POST['phone']) ||*/
-        !isset($_POST['questions'])) {
+        !isset($_POST['msg'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');
     }
 
     $name = $_POST['name']; //required
 	$email = $_POST['email'];     //required
 	$subject = $_POST['subject'];  //required
-	$comments = $_POST['questions']; //required
+	$comments = $_POST['msg']; //required
 
 
     $error_message = "";
@@ -94,10 +94,10 @@ if(isset($_POST['email'])) {
     $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
   }
 
-   /* $string_exp = "/^[A-Za-z .'-]+$/";*/
-	$sting_exp ="+[a-z]{2,3} +[a-z]*|[\w'-]*";
+    $name_exp = "/^[A-Za-z .'-]+$/";
+	/* $string_exp ="+[a-z]{2,3} +[a-z]*|[\w'-]*"; */
 
-  if(!preg_match($string_exp,$name)) {
+  if(!preg_match($name_exp,$name)) {
     $error_message .= 'The Name you entered does not appear to be valid.<br />';
   }
 
@@ -137,10 +137,10 @@ $headers = 'From: '.$email."\r\n".
 
 
 //Print the received data:
-print "<h3> Thank you, $fName $lName, for your comments. </h3>
-<h3>We appreciate your feedback:<br>$comments</h3>
+print '<h3> Thank you, '.$name.', for your comments. </h3>
+<h3>We appreciate your feedback:<snap class="feedback">'.$comments.'</snap></h3>
 <h3>Your feedback is very important for us.</h3>
-<h3>Please allow us 24-48 hours to respond.</h3>";
+<h3>Please allow us 24-48 hours to respond.</h3>';
 
 
 /* This displays the content of the $_POST superglobal array
