@@ -59,7 +59,7 @@
 if(isset($_POST['email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "sofiasd@yahoo.com";
+    $email_to = "sofiafromsd@gmail.com";
     $email_subject = "Email from Mortgage Calculator website";
 
     function died($error) {
@@ -122,8 +122,6 @@ if(isset($_POST['email'])) {
       return str_replace($bad,"",$string);
     }
 
-
-
     $email_message .= "Name: ".clean_string($name)."\n";
     $email_message .= "Email: ".clean_string($email)."\n";
 	$email_message .= "Subject: ".clean_string($subject)."\n";
@@ -135,6 +133,7 @@ $headers = 'From: '.$email."\r\n".
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);
 
+//echo $headers;
 
 //Print the received data:
 print '<h3> Thank you, '.$name.', for your comments. </h3>
