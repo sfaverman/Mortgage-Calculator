@@ -374,6 +374,10 @@ button, .formBtn input {
 	border: solid 1px darkgray;
 	background-color: azure;
 }
+/* remove host logo */
+div a img {
+    display: none;
+}
 
 @media screen and (min-width: 450px) {
 }
@@ -427,11 +431,11 @@ button, .formBtn input {
 	main {
     	padding: 15px 0 70px;
 	}
-	footer {
+	/*footer {
 		position: fixed;
 		width: 100%;
 		bottom: 0;
-	}
+	}*/
 	ul.accordion h3 {
 		padding: 0.5em;
 		font-size: 1.3em;
