@@ -43,6 +43,11 @@ h3 {
     color: darkcyan;
 }
 
+.prtBtn {
+    color: darkcyan;
+    margin-left: 20px;
+}
+
 p {
     color: black;
     margin: 10px 20px 20px;

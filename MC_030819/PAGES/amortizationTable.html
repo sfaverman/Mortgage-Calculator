@@ -12,6 +12,8 @@
     <!-- Normalize.css makes browsers render all elements more consistently -->
     <link rel="stylesheet" href="../CSS/normalize.css">   
     <link rel="stylesheet" href="../CSS/main.css" type="text/css">
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/print.css" type="text/css" media="print">
     
     <!-- JS -->
     
@@ -20,9 +22,9 @@
   <div class="container">
   
      <header>
-        <figure>
+        <div>
               <img src="../IMAGES/image_hand.jpg" alt="mortgage calculator">
-         </figure>
+         </div>
 
         
      <!-- Navigation - HAMBURGER MENU -->
@@ -46,7 +48,7 @@
               
        <main> 
          <h1>Mortgage Loan Calculator</h1>
-         <h2>Amortization Schedule</h2>
+         <h2>Amortization Schedule <a class="prtBtn" href="javascript:window.print()" title="Print this page"><i class="icon ion-md-print"></i></a></h2>
 
          <p>An amortization schedule is a complete table of periodic loan payments, showing the amount of principal and the amount of interest that comprise each payment until the loan is paid off at the end of its term.     </p>
 

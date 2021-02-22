@@ -1,0 +1,22 @@
+body {
+    font-family: serif;
+    font-size: 12pt;
+    line-height: normal;
+    background-color: white;
+}
+main {
+    width: 8in;
+    background: none;
+}
+header, nav, footer {
+    display: none;
+}
+header img, #btnCalc, .prtBtn {
+    display: none;
+}
+/*  Break page */
+#amortTable {page-break-before: always;}
+ul.accordion p {
+	display: block;
+    border: none;
+}

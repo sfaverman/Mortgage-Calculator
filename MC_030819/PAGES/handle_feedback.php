@@ -12,6 +12,7 @@
     <!-- Normalize.css makes browsers render all elements more consistently -->
     <link rel="stylesheet" href="../CSS/normalize.css">
     <link rel="stylesheet" href="../CSS/main.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/print.css" type="text/css" media="print">
 
     <!-- JS -->
 
@@ -161,7 +162,7 @@ print '<h3> Thank you, '.$name.', for your comments. </h3>
    </main>
      <footer>
      	<!--<p>Questions? <a href="mailto:sofiasd@yahoo.com">Email us</a> for help.</p>-->
-     	<p>Copyright &copy;2019 My Simple Mortgage Calculator.</p>
+     	<p>My Simple Mortgage Calculator &copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear())</script> </p>
      </footer>
   </div>
 
