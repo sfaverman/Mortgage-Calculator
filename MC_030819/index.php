@@ -12,16 +12,18 @@
     <!-- Normalize.css makes browsers render all elements more consistently -->
     <link rel="stylesheet" href="CSS/normalize.css" type="text/css">
     <link rel="stylesheet" href="CSS/main.css" type="text/css">
-    
+
     <!-- JS at the bottom -->
 </head>
 <body>
-    
+
     <section class="container">
-     
+
       <header>
 
-        <img src="IMAGES/image_hand.jpg" alt="logo hand holding a house">
+        <div>
+            <img src="IMAGES/image_hand.jpg" alt="logo hand holding a house">
+        </div>
 
         <!-- Navigation - HAMBURGER MENU -->
      <div id="navigation">
@@ -38,17 +40,17 @@
          </nav>
      </div>
      <!-- end of NAVIGATION -->
-         
+
       </header>
      <main>
-   
-     <h1>Mortgage Loan Calculator</h1>   
+
+     <h1>Mortgage Loan Calculator</h1>
      <h2>Find out how much mortgage you can afford</h2>
-     
-     
+
+
      <p>This tool allows you to calculate your monthly home loan payments, using various loan terms, interest rates, and loan amounts. It includes advanced feature like calculating amortization schedule.</p>
      <!--  and the ability to calculate a loan including property taxes, homeowners insurance &amp; property mortgage insurance. -->
-        
+
      <article class="formMortCalc">
          <h3>Select Loan Terms:</h3>
                <p>Fixed
@@ -56,9 +58,9 @@
                   <input type="radio" name="term" value="15">15 Year
                   <button id="otherBtn">
                   <input type="radio" name="term" value="0"></button>Other<span id="otherTerm">&nbsp;</span>
-                  
+
 			   </p>
-       
+
        <form action="#" method="get" id="formC" class="inGrp">
 
        	   	<label for="inCost">Cost of the House:</label>
@@ -73,26 +75,26 @@
 
         	<button id="btnCalc" class="clearIt">Calculate</button>
         </form>
-                            
-        <hr> 
 
-        <p><strong>Total Monthly Payment: </strong><span id="outMonthly">$XXX.XX</span></p>                   
+        <hr>
+
+        <p><strong>Total Monthly Payment: </strong><span id="outMonthly">$XXX.XX</span></p>
 
     	<hr>
      </article> <!-- end of formMortCalc -->
 
-               
-    </main> 
-                      
+
+    </main>
+
      <footer>
        <!--  <p>Questions? <a href="mailto:sofiasd@yahoo.com">Email us</a> for help.</p>-->
-         <p>Copyright &copy;2019 My Simple Mortgage Calculator.</p>
-     </footer> 
-          
-     </section> <!-- end of container -->  
-          
-     <script src="SCRIPTS/mortgageCalc.js"></script> 
-     
+         <p>Copyright &copy;<?php echo date("Y"); ?> My Simple Mortgage Calculator.</p>
+     </footer>
+
+     </section> <!-- end of container -->
+
+     <script src="SCRIPTS/mortgageCalc.js"></script>
+
   </body>
-      
+
 </html>
